@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="rr"></p>
+    <p id="aa"></p>
+    <p id="bb"></p>
+    <p id="cc"></p>
+    <p id="dd"></p>
+    <p id="ee"></p>
+<hr>
+    <h1 id="ff"></h1>
+    <h1 id="gg"></h1>
+<hr> 
+    <b id="hh"></b>
+
+    <script>
+        var a = 50;
+        a += 40;
+
+        document.getElementById('rr').innerHTML = a;
+        // -----------------------------------------------------
+        var b = 50;
+        b -= 30;
+
+        document.getElementById('aa').innerHTML = b;
+        // -----------------------------------------------------
+        var c = 50;
+        c *= 3;
+
+        document.getElementById('bb').innerHTML = c;
+        // -----------------------------------------------------
+        var d = 30;
+        d /= 2;
+
+        document.getElementById('cc').innerHTML = d;
+        // -----------------------------------------------------
+        var e = 600;
+        e %= 34;
+
+        document.getElementById('dd').innerHTML = e;
+        // -----------------------------------------------------
+        var f = 60;
+        f **= 3;
+
+        document.getElementById('ee').innerHTML = f;
+
+        // ===================================================================================
+
+        var g = 20;
+        g++;
+        document.getElementById('ff').innerHTML = g;
+        //    -------------------------------------------------------
+        var h = 20;
+        h--;
+        document.getElementById('gg').innerHTML = h;
+
+        //    ==============================(object)======================================================
+
+        var raav = {
+            firstName: "ravi senjaliya",
+            school: "ashadeep ",
+            pr: "89%",
+            collage: "MS university"
+        }
+
+        document.getElementById('hh').innerHTML = "my name is " + raav.firstName + " i have studied in " + raav.school +
+            " with " + raav.pr + " and i am persuing B.com in " + raav.collage;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="ravi"></h1>
+    <h1 id="ravi2"></h1>
+    <h1 id="ravi3"></h1>
+    <h1 id="ravi4"></h1>
+    <h1 id="ravi5"></h1>
+    <h2 id="raav"></h2>
+
+    <b id="sel" style="font-size:50px ;"></b><br>
+    <b id="sell"></b>
+
+
+
+
+
+
+    <script>
+       function rv0(a,b){
+        return a**b;
+       }
+
+       document.getElementById('ravi').innerHTML = rv0(20 ,2);
+        // ---------------------------------------------------------------------------------------
+        function rv1(c, d) {
+            return c - d;
+        }
+
+        document.getElementById("ravi2").innerHTML = rv1(5, 10);
+        // -----------------------------------------------------------------------------------------
+        function rv2(a, b) {
+            return a * b
+        }
+
+        document.getElementById("ravi3").innerHTML = rv2(5, 20);
+        // -----------------------------------------------------------------------------------------
+        function rv3(a, b) {
+            return a % b
+        }
+
+        document.getElementById("ravi4").innerHTML = rv3(50, 10000);
+        // -----------------------------------------------------------------------------------------
+        function rv4(a, b) {
+            return a / b
+        }
+
+        document.getElementById("ravi5").innerHTML = rv4(50000, 30);
+        // ---------------------------------------------------------------------------------------
+        function rv5(a, b, c) {
+            return a + b * (c)
+        }
+
+        document.getElementById("raav").innerHTML = rv5(50, 30, 4);
+        // =======================================================================
+
+
+        function tocell(x) {
+            return (x * 9 / 5) + 32
+
+        }
+
+        document.getElementById("sel").innerHTML = " the temperature " + tocell(40) + "*";
+
+        //    ==========================================================================
+        function myfun(x) {
+            return (50 + x) - (5 * 7)
+        }
+        document.getElementById("sell").innerHTML = myfun(30);
+    </script>
+</body>
+
+</html>

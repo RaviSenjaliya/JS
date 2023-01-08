@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a"></h1>
+    <h1 id="b"></h1>
+    <script>
+        document.getElementById('a').innerHTML = Math.random(); 
+        document.getElementById('b').innerHTML = Math.floor(Math.random()*6)+1;
+    </script>
+   <!-- ================================================================================================== -->
+    <button onclick="document.getElementById('c').innerHTML = rnd(0 ,20) ">rendom</button>
+    <h1 id="c"></h1>
+
+    <script>
+       function rnd(min , max){
+            return Math.floor(Math.random() * (max - min + 1))+ min;
+        }
+    </script>
+    <!-- -------------------------------------- -->
+    <button onclick="document.getElementById('e').innerHTML = rnnd(1 , 6) ">rendom</button>
+    <h1 id="e"></h1>
+
+    <script>
+        function rnnd(max , min ){
+            return Math.floor(Math.random() * (max - min + 1)) + min ; 
+        }
+    </script>
+    <!-- =================================================================================================== -->
+    <h1 id="f"></h1>
+    <script>
+        const a = 20 ;
+        const b = 30 ;
+
+        document.getElementById('f').innerHTML = (a<40 && b>40) +" <br> "+(a<30 || b>50)+" <br> "+ !(a === b) ;
+    </script>
+    <!-- ====================================================================================================== -->
+     <!-- <input type="text" id="age" value="18">
+     <button onclick="myfn()">click</button>
+     <p id="print"></p>
+     <script>
+        function myfn(){
+            let agee = document.getElementById("age").value ;
+            let ab = (agee < 18) ? "you can not vote &#128517":"you can vote &#128513";
+            document.getElementById("print").innerHTML = ab ;
+        }
+     </script> -->
+     <!-- =================================================================================================== -->
+     <!-- <input type="text" id="umar" value="18">
+     <button onclick="myffn()">click</button>
+     <p id="des"></p>
+      <script>
+        function myffn(){
+            let voteble;
+            let agee = Number(document.getElementById(umar).value );
+            if(isNaN(umar)){
+                voteble = "is NAN";
+            }
+            else{
+                voteble = (agee < 18) ? "you can not vote &#128517":"you can vote &#128513";
+            }
+            document.getElementById("des").innerHTML = voteble ;
+        }
+      </script> -->
+      <!-- ================================================================================================= -->
+      <input type="text" id="age" value="18">
+      <button onclick="myfn()">vote</button>
+      <p id="ravi"></p>
+
+      <script>
+        function myfn() {
+            let vot = "";
+            let input = document.getElementById("age").value ;
+            if (isNaN(input)) {
+                vot = "is not number";
+            } else {
+                vot = (input < 18)? "you can not vote":"you can give vote";
+            }
+            document.getElementById("ravi").innerHTML = vot ;
+        }
+      </script>
+      <!-- ============================================== -->
+      <input type="text" id="Age" value="18">
+      <button onclick="myfnn()">click</button>
+      <h1 id="raj"></h1>
+      <script>
+        function myfnn() {
+            const age = document.getElementById("Age").value ;
+            let value = (age < 18)? "not giv vote":"yes you can giv vote";
+
+            document.getElementById("raj").innerHTML = value ;
+        }
+      </script>
+</body>
+</html>

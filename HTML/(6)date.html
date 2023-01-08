@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="d1"></h1>
+    <script>
+        const aa = new Date()
+        document.getElementById("d1").innerHTML = aa ;
+    </script>
+    <!-- ------------------------------------------------------------------------------------- -->
+    <h1 id="d2"></h1>
+    <script>
+        const bb = new Date(2022 , 11 , 8 , 6 , 30 )
+        document.getElementById("d2").innerHTML = bb ;
+    </script>
+    <!-- ------------------------------------------------------------------------------------- --> <hr>
+    <b>toDateString()</b>
+    <h1 id="d3"></h1>
+    <script>
+        const cc = new Date();
+        document.getElementById("d3").innerHTML = cc.toDateString();
+    </script>
+    <!-- ------------------------------------------------------------------------------------- --> <hr>
+    <b>Date Get  Method</b>
+    <h1 id="d4"></h1>
+    <h1 id="d5"></h1>
+    <h1 id="d6"></h1>
+    <h1 id="d7"></h1>
+    <h1 id="d8"></h1>
+    <h1 id="d9"></h1>
+    <script>
+        const dd = new Date();
+        document.getElementById("d4").innerHTML = dd.getFullYear();
+        document.getElementById("d5").innerHTML = dd.getMonth()+1 +" month";
+        document.getElementById("d6").innerHTML = dd.getDay() +" day";
+        document.getElementById("d7").innerHTML = dd.getHours() +" hours";
+        document.getElementById("d8").innerHTML = dd.getSeconds() +" seconds";
+        document.getElementById("d9").innerHTML = dd.getMilliseconds()  +" milliseconds";
+    </script>
+    <!-- ------------------------------------------------------------------------------------- --> <hr>
+    <b>month</b>
+    <h1 id="c1"></h1>
+    <script>
+       const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+       const ee = new Date();
+       let month = months[ee.getMonth()];
+
+       document.getElementById("c1").innerHTML = month;
+    </script>
+    <!-- ------------------------------------------------------------------------------------- --> <hr>
+    <b>day</b>
+    <h1 id="c2"></h1>
+    <script>
+       const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+       const ff = new Date();
+       let day = days[ff.getDay()];
+
+       document.getElementById("c2").innerHTML = day ;
+    </script>
+     <!-- ------------------------------------------------------------------------------------- --> <hr>
+     <b>Date set Method</b>
+     <h1 id="c3"></h1>
+     <h1 id="c4"></h1>
+     <h1 id="c5"></h1>
+     <h1 id="c6"></h1>
+     <h1 id="c7"></h1>
+     <h1 id="c8"></h1>
+     <h1 id="c9"></h1>
+     <script>
+        const gg = new Date();
+        gg.setFullYear(2022);
+        gg.setMonth(6)+1;
+        gg.setDate(25);
+        gg.setMinutes(58);
+        gg.setSeconds(3500);
+        gg.setMilliseconds(298765);
+        document.getElementById("c3").innerHTML = gg ;
+        document.getElementById("c4").innerHTML = gg ;
+        document.getElementById("c5").innerHTML = gg ;
+        document.getElementById("c6").innerHTML = gg ;
+        document.getElementById("c7").innerHTML = gg ;
+        document.getElementById("c8").innerHTML = gg ;
+     </script>
+      <!-- ------------------------------------------------------------------------------------- --> <hr>
+      <b>date if else</b>
+      <p id="f1" style="font-size:5vw ;text-align: center;"></p>
+
+      <script>
+      let text;
+      const today = new Date();
+      const someday = new Date();
+      someday.setFullYear(2100, 0, 14);
+      
+      if (someday > today) {
+        text = "&#128512;";
+      } else {
+        text = "&#x1F47F;";
+      }
+      
+      document.getElementById("f1").innerHTML = text;
+      </script>
+      <!-- ========================================================= -->
+      <h1 id="ravi"></h1>
+      <script>
+        const dayy = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        let dat = new Date();
+        let  both = dayy[dat.getDay()];
+        document.getElementById("ravi").innerHTML = both
+      </script>
+    </body>
+</html>

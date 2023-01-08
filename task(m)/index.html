@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>confirmation box</h1><br>
+    <button onclick="myfn()">click</button>
+    <p id="confirm"></p>
+    <script>
+        function myfn() {
+            let dem = "";
+            if (confirm("press a button") == true) {
+                dem += "you press ok!";
+            } else {
+                dem += "you canceld!";
+            }
+            document.getElementById("confirm").innerHTML = dem;
+        }
+    </script>
+    <!-- ============================================================= -->
+    <hr>
+    <h1>prompt box</h1>
+    <button onclick="myprp()">click</button>
+    <p id="prompt"></p>
+    <script>
+        function myprp() {
+            let dem1 = prompt("Please Enter your name :", "ravi senjaliya");
+            if (dem1 != null) {
+                document.getElementById("prompt").innerHTML = "Hello " + dem1 + "! How are You today?";
+            }
+        }
+    </script>
+    <!-- ============================================================= -->
+    <hr>
+    <h1>Mouseover and Mouseout</h1>
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="/task(m)/gif(1).gif" alt="Smiley" width="15%">
+    <script>
+        function bigImg(x) {
+            x.style.width = "20%";
+        }
+
+        function normalImg(x) {
+            x.style.width = "15%";
+        }
+    </script>
+    <!-- ============================================================= -->
+    <hr>
+    <h1>Reverse array</h1>
+    <button onclick="myarr()">click</button>
+    <b id="ar"></b>
+    <script>
+        const arr = [20, 30, 40, 50, 60, 70];
+        document.getElementById("ar").innerHTML = arr;
+
+        function myarr() {
+            document.getElementById("ar").innerHTML = arr.reverse();
+        }
+    </script>
+    <!-- ============================================================= -->
+    <hr>
+    <h1>concate array</h1>
+    <b id="concat"></b>
+    <script>
+        let arr1 = ["ravi", "rajan"];
+        let arr2 = ["milan", "jay"];
+        let arr3 = arr1.concat(arr2);
+
+        document.getElementById("concat").innerHTML = arr3;
+    </script>
+    <!-- ============================================================= -->
+    <hr>
+    <h1>pop push</h1>
+    <button onclick="pop()">pop</button>
+    <button onclick="push()">push</button>
+    <h3 id="pp"></h3>
+    <script>
+        let PP = ["😀", "😁", "😎", "😂"];
+        document.getElementById("pp").innerHTML = PP;
+
+        function pop() {
+            PP.pop();
+            document.getElementById("pp").innerHTML = PP;
+        }
+
+        function push() {
+            PP.push("😍");
+            document.getElementById("pp").innerHTML = PP;
+        }
+    </script>
+    <!-- ============================================================= -->
+    <hr>
+    <h1>Import Export</h1>
+    <p id="ix"></p>
+    <script type="module">
+        import {name,lastName,age,city} from "./data.js";
+
+       let IXX = "my name is " + name + lastName +" my age "+ age +" and i'm from "+ city ;
+       document.getElementById('ix').innerHTML= IXX ;
+      </script>
+    <!-- ============================================================= -->
+    <hr>
+    <h1>Fetch data</h1>
+    <button onclick="mytxt()">click</button>
+    <P id="Fd"></P>
+    <script>
+        function mytxt() {
+            let txxt = new XMLHttpRequest();
+            txxt.open("GET","./data.txt");
+            txxt.onload = function() {
+                document.getElementById("Fd").innerHTML = this.responseText;
+            }
+            txxt.send();
+        }
+    </script>
+    <!-- ============================================================= -->
+    <hr>
+    <h1>JSON</h1>
+    <p id="jn"></p>
+    <script>
+        const ob = '{"fruit":"Apple","size":"large","color":"red"}';
+        const OB = JSON.parse(ob);
+        document.getElementById("jn").innerHTML = OB.fruit + " is so " + OB.size +" and it's color " + OB.color  ;
+    </script>
+
+</body>
+
+</html>

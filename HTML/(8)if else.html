@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a"></h1>
+    <script>
+        if (new Date().getHours() < 11 ) {
+            document.getElementById("a").innerHTML = "is goood day" ;
+        }else{
+            document.getElementById("a").innerHTML = "is my day";
+        }
+    </script>
+    <!-- ================================================== -->
+    <P id="b"></P>
+    <script>
+        let time = new Date().getHours();
+        let condi;
+
+        if (time < 12) {
+            condi = "good morning";
+        } else {
+            condi = "good afternun";
+        }
+
+        document.getElementById("b").innerHTML = condi ;
+    </script>
+    <!-- =================================================== -->
+    <b id="c"></b>
+    <script>
+        let ab = new Date().getHours();
+        let cdd;
+
+         if (ab < 12) {
+            cdd = "good morning";
+         } else if(ab < 4) {
+            cdd = "good afternun";
+         }else{
+            cdd = "good evening";
+         }
+
+         document.getElementById("c").innerHTML = cdd ;
+    </script>
+    <!-- =================================================== --> <hr>
+   <h1 id="d"></h1>
+   <button onclick="fun()">click</button>
+   <input type="text" id="num">
+   <script>
+    function fun(){
+        let add;
+        let OE = document.getElementById("num").vlue;
+        if (isNaN(OE) ) {
+            add = "NAN"
+        } else {
+            add = (OE < 0) ? "is Positive":"is nagative";
+        }
+        document.getElementById("d").innerHTML = add ;  
+    }
+   </script>
+   <!-- =====================================================--> <hr>
+   <h1 id="e"></h1>
+   <script>
+    let print;
+    let num = -1;
+    if (num < 0) {
+      print = "is nagative number"  
+    } else {
+        print = "is positive number"
+    }
+    document.getElementById("e").innerHTML = print ;
+   </script>
+   <!-- ===================================================== --> <hr>
+   drive or note
+   <input type="text" id="agee">
+   <button onclick="mybt()">click</button>
+   <p id="f"></p>
+   <script>
+    function mybt(){
+        let value;
+        let age = document.getElementById("agee").value ;
+
+        if (age > 18 ) {
+            value = "you can drive"
+        } else {
+            value = "you can not drive"
+        }
+        document.getElementById("f").innerHTML = value ;
+    }
+   </script>
+   <!-- ====================================================== --> <hr>
+   odd even
+   <input type="text" id="nuum">
+   <button onclick="mynu()">click</button>
+   <b id="i"></b>
+   <script>
+    function mynu(){
+        let val;
+        let number = document.getElementById("nuum").value ;
+
+        if (isNaN(number)) {
+            val = "NAN"
+        } else {
+            val = (number % 2 == 0) ? "number is even ":"number is odd";
+
+        }
+        document.getElementById("i").innerHTML = val ;
+    }
+   </script>
+   
+</body>
+</html>

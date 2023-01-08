@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      .top {
+        margin: 0 auto;
+        width: 50%;
+        margin-top: 50px;
+        text-align: center;
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(190, 100, 100, 1) 50%,
+          rgba(69, 181, 252, 1) 100%
+        );
+        border-radius: 5px 20px 5px 20px;
+        box-shadow: rgba(1, 1, 1, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      input {
+        width: 80%;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        background-color: white;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+      }
+      .h1 {
+        color: rgb(255, 255, 255);
+        font-family: "Abril Fatface", cursive;
+        letter-spacing: 2px;
+        padding-top: 10px;
+      }
+      button {
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        background-color: white;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px;
+        
+      }
+      .paragraph-styling {
+        margin: 0;
+        cursor: pointer;
+        font-family: "Abril Fatface", cursive;
+        background-color: rgba(0, 0, 0, 0.192);
+        width: 85%;
+        margin: 0 auto;
+        color: white;
+
+      }
+    </style>
+    <!-- ================================================================================================== -->
+  </head>
+  <body>
+    <div class="top">
+      <div class="main">
+        <h2 class="h1">TO Do List</h2>
+        <input type="text" id="input" placeholder="add some new...." /><button id="add">+</button>
+      </div>
+      <div id="data"></div>
+    </div>
+    <!-- =================================================================================================== -->
+    <script>
+      let tosoadd = document.getElementById("add");
+      let tododata = document.getElementById("data");
+      let todotext = document.getElementById("input");
+
+      tosoadd.addEventListener(`click`, function () {
+        var paragraph = document.createElement("p");
+        paragraph.innerText = todotext.value;
+        paragraph.classList.add("paragraph-styling");
+        tododata.appendChild(paragraph);
+        todotext.value = "";
+        paragraph.addEventListener("click", function () {
+          paragraph.style.textDecoration = "line-through";
+        });
+        paragraph.addEventListener("dblclick", function () {
+          tododata.removeChild(paragraph);
+        });
+      });
+    </script>
+  </body>
+</html>

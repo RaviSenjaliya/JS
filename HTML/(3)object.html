@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="ob"></p><hr>
+    <p id="bb"></p> <hr>
+    <p id="ravi"></p>
+    <button onclick="document.getElementById('ravi').innerHTML = Date() "> click</button><br /><hr>
+    <button onclick="this.innerHTML = Date()">click</button><br /><br /><br />
+    <!-- ------------------------------------------------------------------------------- -->
+    <h2 id="rajan"></h2>
+    <button onclick="raj()">function</button>
+<!-- ================================================================================================================= -->
+    <script>
+      var car = {
+        name: "volvo",
+        fuletype: "petrol",
+        seating: "5",
+      };
+      document.getElementById("ob").innerHTML = car.name + " " + car.fuletype;
+      // ----------------------------------------------------------------------------------------------
+      const name = {
+        name:"ravi",
+        fname:"shaileshbhai",
+        age:"20 year",
+        all: function (){
+       return this.name +" "+this.fname +" "+ this.age;
+        },
+      };
+
+      document.getElementById("bb").innerHTML = name.all();
+      // -------------------------------------------------------------------------------
+      function raj() {
+        document.getElementById("rajan").innerHTML = Date();
+      }
+      // -------------------------------------------------------------------------------
+
+     
+    </script>
+  </body>
+</html>

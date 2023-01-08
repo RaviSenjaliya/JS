@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" name="" id="lice" value="18">
+   <button onclick="myfun()">click</button>
+   <p id="men"></p>
+   <p id="arr"></p>
+   
+   <script>
+    function myfun(){
+    let ab;
+    let ok = document.getElementById("lice").value ;
+
+    if (ok < 16 ) {
+        ab = " not eligeble"
+    } else if(18 > ok) {
+        ab = "you can drive moped"
+    }else if(18 < ok) {
+       ab = "you can drive bike"
+    }
+     document.getElementById("men").innerHTML = ab
+    }
+   </script>
+
+  <!-- ============================================================ -->
+  
+
+
+
+    <script src="/index.js"></script>
+</body>
+</html>

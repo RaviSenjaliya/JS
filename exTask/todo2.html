@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(90deg,
+                    rgba(131, 58, 180, 1) 0%,
+                    rgba(190, 100, 100, 1) 50%,
+                    rgba(69, 181, 252, 1) 100%);
+        }
+        .top {
+            margin: 0 auto;
+            width: 50%;
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(3.6px);
+            -webkit-backdrop-filter: blur(3.6px);
+            border: 1px solid rgba(57, 6, 6, 0.47);
+            border-radius: 5px 20px 5px 20px;
+            box-shadow: rgba(1, 1, 1, 0.25) 0px 54px 55px,
+                rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+
+        input {
+            width: 80%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            background-color: white;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 10px;
+        }
+
+        button {
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            background-color: white;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px;
+        }
+
+        #error {
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+        }
+        li{
+            color: white;
+            text-decoration: none;
+        }
+        a{
+            color: skyblue;
+            text-decoration: none;
+           margin-left: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <ul id="box"></ul>
+        <input type="text" id="name">
+        <button id="btnclick"  onclick="addmore()">add</button><br>
+        <small id="error"></small>
+    </div>
+
+<script>
+   function addmore() {
+    document.getElementById("error").innerHTML = " ";
+    let name = document.getElementById("name").value;
+
+    if (name == "") {
+        document.getElementById("error").innerHTML = "please enter  value.... 😅 ";
+    } else {
+       let box = document.getElementById("box");
+
+       let li = document.createElement("li")
+       li.textContent = name ;
+
+       let a = document.createElement("a");
+       a.textContent = " ✖ ";
+       a.href = "javascript:void(0)";
+       li.appendChild(a);
+
+       box.appendChild(li);
+
+    }
+     document.getElementById("name").value = "";
+   }
+
+   let x = document.querySelector("ul");
+   x.addEventListener("click" , function(e){
+    let box = document.getElementById("box");
+    let li = e.target.parentNode;
+    box.removeChild(li);
+   });
+</script>
+
+</body>
+
+</html>

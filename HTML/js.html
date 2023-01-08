@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const users = {
+            '2345234': {
+                name: "John",
+                age: 29
+            },
+            '8798129': {
+                name: "Jane",
+                age: 42
+            },
+            '1092384': {
+                name: "Fred",
+                age: 17
+            }
+        };
+
+        const abov20 = Object.entries(users).reduce((acc, [id, user]) => {
+            if (user.age > 20) {
+                acc.push({
+                    ...user,
+                    key
+                })
+            }
+            return acc;
+        }, []);
+
+        console.log(abov20);
+    </script>
+</body>
+
+</html>

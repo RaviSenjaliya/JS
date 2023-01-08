@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="home"></p>
+    <p id="home2"></p>
+    <p id="length"></p>
+
+    <script>
+      const home = ["1BHK", "2BHK", "3BHK", "4BHK"];
+      home.push("5BHK");
+      home[0] = "0BHK";
+      document.getElementById("home").innerHTML = home;
+      document.getElementById("home2").innerHTML = home[2];
+      document.getElementById("length").innerHTML = home.length;
+    </script>
+    <hr />
+
+    <!-- ======================================================================================= -->
+
+    <h1 id="push"></h1>
+    <button onclick="mypush()">push</button>
+
+    <script>
+      const name = ["ravi", "rajan", "darshit", "milan"];
+      document.getElementById("push").innerHTML = name;
+
+      function mypush() {
+        name.push("jensi");
+        document.getElementById("push").innerHTML = name;
+      }
+    </script>
+
+    <!-- ======================================================================================== -->
+
+    <p id="ulli"></p>
+
+    <script>
+      const collage = [
+        "VNSGU",
+        "gujarat university",
+        "M.S.university",
+        "parul university",
+      ];
+
+      let text = "<ul>";
+      collage.forEach(myli);
+      text += "</ul>";
+
+      function myli(value) {
+        text += "<li>" + value + "</li>";
+      }
+
+      document.getElementById("ulli").innerHTML = text;
+    </script>
+
+    <!-- ======================================================================================== -->
+    <hr />
+    <b>join toString</b>
+    <h3 id="a1"></h3>
+    <h1 id="a2"></h1>
+
+    <script>
+      const nname = ["ravi", "rajan", "milan", "daksh", "jay"];
+      document.getElementById("a1").innerHTML =
+        nname + "<br> " + nname.toString() + " <br> " + nname.join("*");
+    </script>
+
+    <!-- ======================================================================================== -->
+    <hr />
+    <b>pop push</b>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+      const boy = ["ravi", "rajan", "milan", "daksh", "jay"];
+      document.getElementById("demo1").innerHTML = boy;
+      boy.push("darshit");
+      document.getElementById("demo2").innerHTML = boy;
+      boy.pop();
+      document.getElementById("demo3").innerHTML = boy;
+    </script>
+
+    <!-- ======================================================================================== -->
+    <hr />
+    <b>shif unshift</b>
+    <p id="d1"></p>
+    <p id="d2"></p>
+    <p id="d3"></p>
+    <script>
+      const boys = ["ravi", "rajan", "milan", "daksh", "jay"];
+      document.getElementById("d1").innerHTML = boys;
+
+      boys.shift();
+      document.getElementById("d2").innerHTML = boys;
+
+      boys.unshift("rohan");
+      document.getElementById("d3").innerHTML = boys;
+    </script>
+
+    <!-- ======================================================================================== -->
+    <hr />
+    <b>delete</b>
+    <p id="normal"></p>
+    <p id="del"></p>
+    <script>
+      const nom = ["ravi", "rajan", "milan", "daksh", "jay"];
+      document.getElementById("normal").innerHTML = nom;
+
+      delete nom[1];
+      document.getElementById("del").innerHTML = nom;
+    </script>
+
+    <!-- ======================================================================================== -->
+    <hr />
+    <b>Concat</b>
+    <p id="con"></p>
+
+    <script>
+      const man = ["roy", "doy", "boy", "khoy"];
+      const woman = ["g1", "g2", "g3"];
+      const both = man.concat(woman, "hello brother");
+
+      document.getElementById("con").innerHTML = both;
+    </script>
+
+    <!-- ======================================================================================== -->
+    <hr />
+    <b>Splicing Slicing</b>
+    <h3 id="nor"></h3>
+    <p id="sp"></p>
+
+    <script>
+      const car = ["BMW", "volvo", "audi", "fiat", "Kia"];
+      document.getElementById("nor").innerHTML = car;
+
+      car.splice(2, 0, "royal", "fanti");
+      document.getElementById("sp").innerHTML = car;
+    </script>
+    <!-- --------------------------------------------------------- -->
+    <h3 id="no"></h3>
+    <p id="sl"></p>
+
+    <script>
+      const cars = ["BMW", "volvo", "audi", "fiat", "Kia"];
+      const ca = cars.slice(2, 4);
+      document.getElementById("no").innerHTML = cars + " <br> " + ca;
+    </script>
+    <!-- ==============================================================================================
+                                          (sort)
+    =================================================================================================== -->
+    <hr />
+    <b>Sort</b>
+    <h1 id="s1"></h1>
+    <h1 id="s2"></h1>
+    <h1 id="s3"></h1>
+
+    <script>
+      const name1 = ["ravi", "jensi", "mansi", "jay", "darshit", "milan"];
+      document.getElementById("s1").innerHTML = name1;
+      name1.sort();
+      document.getElementById("s2").innerHTML = name1; //(asending)
+      name1.reverse();
+      document.getElementById("s3").innerHTML = name1; //(desending)
+    </script>
+    <!-- =================================================================================================== -->
+    <hr />
+    <b>Number sort</b>
+    <button onclick="more()">Alphabetically</button>
+    <button onclick="dess()">descending</button>
+    <button onclick="asse()">ascending</button>
+
+    <h1 id="s4"></h1>
+    <script>
+      const Number1 = [50, 20, 8, 100, 80, 96, 78];
+      document.getElementById("s4").innerHTML = Number1;
+
+      function more() {
+        Number1.sort();
+        document.getElementById("s4").innerHTML = Number1;
+      }
+
+      function dess() {
+        Number1.sort(function (a, b) {
+          return a - b;
+        });
+        document.getElementById("s4").innerHTML = Number1;
+      }
+
+      function asse() {
+        Number1.sort(function (a, b) {
+          return b - a;
+        });
+        document.getElementById("s4").innerHTML = Number1;
+      }
+    </script>
+    <!-- ========================================================================================== -->
+    <hr />
+    <b>highest lowest</b>
+    <h1 id="s6"></h1>
+    <h1 id="s7"></h1>
+    <h1 id="s8"></h1>
+
+    <script>
+      const Number2 = [50, 20, 8, 100, 80, 96, 78];
+      document.getElementById("s6").innerHTML = Number2;
+
+      Number2.sort(function (a, b) {
+        return a - b;
+      });
+      document.getElementById("s7").innerHTML =
+        " lowest value is " + Number2[0];
+
+      Number2.sort(function (a, b) {
+        return b - a;
+      });
+      document.getElementById("s8").innerHTML =
+        " highest value is " + Number2[0];
+    </script>
+    <!-- ========================================================================================== -->
+    <hr />
+    <button onclick="myfun()">rendom</button>
+    <p id="demoo"></p>
+
+    <script>
+      const Number3 = [40, 100, 1, 5, 25, 10];
+      document.getElementById("demoo").innerHTML = Number3;
+
+      function myfun() {
+        Number3.sort(function (a, b) {
+          return 0.5 - Math.random();
+        });
+        document.getElementById("demoo").innerHTML = Number3;
+      }
+    </script>
+    <!-- ========================================================================================== -->
+    <hr />
+    <b>array of object</b>
+    <h4 id="s10"></h4>
+
+    <script>
+      const name2 = [
+        { age: "20", eyecolor: "darkblue", city: "surat" },
+        { age: "28", eyecolor: "green", city: "vapi" },
+        { age: "37", eyecolor: "black", city: "vadodra" },
+      ];
+
+      myfunction();
+      name2.sort(function (a, b) {
+        return a.age - b.age;
+      });
+      myfunction();
+
+      function myfunction() {
+        document.getElementById("s10").innerHTML =
+          name2[0].age +
+          " " +
+          name2[0].eyecolor +
+          " " +
+          name2[0].city +
+          "<br>" +
+          name2[1].age +
+          " " +
+          name2[1].eyecolor +
+          " " +
+          name2[1].city +
+          "<br>" +
+          name2[2].age +
+          " " +
+          name2[2].eyecolor +
+          " " +
+          name2[2].city;
+      }
+    </script>
+    <!-- ========================================================================================== -->
+    <hr />
+    <b>odd number in array</b>
+    <h3 id="odd"></h3>
+    <script>
+      const Number4 = [40, 100, 1, 5, 25, 10];
+
+      const oddd = Number4.filter((n) => n % 2);
+      document.getElementById("odd").innerHTML = oddd;
+    </script>
+    <!-- ========================================================================================= -->
+    <!-- array itetration  -->
+    <!-- ============================================================================================= -->
+    <hr />
+    <b>forEach()</b>
+    <h3 id="rv"></h3>
+    <script>
+      const fE = [45, 20, 30, 55, 64, 31];
+
+      let txt = "";
+      fE.forEach(myfE);
+      document.getElementById("rv").innerHTML = txt;
+
+      function myfE(value, index, array) {
+        txt += value + " <br> ";
+      }
+    </script>
+    <!-- --------------------------------------------------------- ------------------------->
+    <b>task </b>
+    <h3 id="addd"></h3>
+    <script>
+      const aee = [1, 2, 3, 4, 5, 6];
+      let tex = "";
+      aee.forEach(myxzx);
+      document.getElementById("addd").innerHTML = tex;
+
+      function myxzx(value, index, array) {
+        tex += value + " <br>";
+      }
+    </script>
+    <!-- ========================================================================================== -->
+    <hr />
+    <b>map()</b>
+    <h3 id="dax"></h3>
+    <h3 id="dxx"></h3>
+    <h3 id="dx"></h3>
+
+    <script>
+      const lalu = [45, 20, 30, 55, 64, 31];
+      const lali = lalu.map(myfan);
+
+      // ------------------------------------------------------------
+      document.getElementById("dax").innerHTML = lali;
+
+      function myfan(value, index, array) {
+        return value * 2;
+      }
+      // ------------------------------------------------------------
+
+      const cd = lalu.map(myraj);
+      document.getElementById("dxx").innerHTML = cd;
+
+      function myraj(value, index, array) {
+        return value + 3;
+      }
+      // --------------------------------------------------------------
+      const plus = lalu.map(mylol);
+      document.getElementById("dx").innerHTML = plus;
+
+      function mylol(value, index, array) {
+        return value - 3;
+      }
+    </script>
+    <!-- ========================================================================================== -->
+    <hr />
+    <b>filter()</b>
+    <h3 id="filter"></h3>
+    <script>
+      const abb = [60, 30, 20, 90];
+      const acc = abb.filter(myfill);
+      document.getElementById("filter").innerHTML = acc;
+
+      function myfill(value, index, array) {
+        return value > 10;
+      }
+    </script>
+    <!-- ------------------------------------------------------------------------------------------ -->
+    <b>even</b>
+    <h3 id="task"></h3>
+    <script>
+      const add = [1, 2, 3, 4, 5, 6];
+      const even = add.filter(myeven);
+      document.getElementById("task").innerHTML = even;
+
+      function myeven(value, index, array) {
+        return value % 2 === 0;
+      }
+    </script>
+    <!-- ========================================================================================== -->
+    <hr />
+    <b>reduce()</b>
+    <h3 id="aff"></h3>
+    <script>
+      const redu = [20, 30, 40, 50];
+      const redu2 = redu.reduce(myarr, 3000);
+
+      document.getElementById("aff").innerHTML = redu2;
+
+      function myarr(total, value) {
+        return total + value;
+      }
+    </script>
+    <!-- ========================================================================================== -->
+    <hr />
+    <b>every()|some()</b>
+    <h3 id="ahh"></h3>
+    <h3 id="ayy"></h3>
+    <script>
+      const every = [2, 30, 33, 4, 80];
+      // -----------------------------------------------
+      const every2 = every.every(myzz);
+      document.getElementById("ahh").innerHTML = every2;
+
+      function myzz(value) {
+        return value > 10;
+      }
+      // ------------------------------------------------
+      const some = every.some(mycx);
+      document.getElementById("ayy").innerHTML = some;
+
+      function mycx(value) {
+        return value > 10;
+      }
+    </script>
+    <!-- ========================================================================================== -->
+    <hr />
+    <b>indexof()</b>
+    <h3 id="ok"></h3>
+    <script>
+      const index = ["ravi", "rajan", "milan", "darshit"];
+      let index1 = index.indexOf("rajan");
+      document.getElementById("ok").innerHTML = index1;
+    </script>
+    <!-- ========================================================================================== -->
+    <hr />
+    <b>finde()</b>
+    <p id="demo"></p>
+
+    <script>
+      const numbers = [4, 9, 16, 25, 29];
+      let first = numbers.find(myFunction);
+
+      document.getElementById("demo").innerHTML =
+        "First number over 18 is " + first;
+
+      function myFunction(value, index, array) {
+        return value > 18;
+      }
+    </script>
+    <!-- ===================================================================================================================== -->
+    <h4 id="lop"></h4>
+    <script>
+      const ob = ["ravi", "jensi", "mansi", "jay", "darshit", "milan"];
+      let ab = ob.length;
+
+      let ull = "<ul>";
+      for (let i = 0; i < ab; i++) {
+        ull += "<li>" + ob[i] + "</li>";
+      }
+      ull += "</ul>";
+
+      document.getElementById("lop").innerHTML = ull;
+    </script>
+    <!-- ================================================================================================================= -->
+    <h4 id="each"></h4>
+    <script>
+      const ec = ["ravi", "jensi", "mansi", "jay", "darshit", "milan"];
+
+      let fo = "<ul>";
+        ec.forEach(fun);
+       fo += "</ul>";
+
+         document.getElementById("each").innerHTML = fo ;
+
+
+       function fun(value) {
+        fo += "<li>"+ value +"</li>"
+       }
+    </script>
+    <!-- ======================================================== -->
+   
+    
+   </script>
+  </body>
+</html>

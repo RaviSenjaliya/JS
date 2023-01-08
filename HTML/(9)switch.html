@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      let day;
+      let date = new Date().getDay();
+      switch (date) {
+        case 0:
+          day = "Sunday";
+          break;
+        case 1:
+          day = "Monday";
+          break;
+        case 2:
+          day = "Tuesday";
+          break;
+        case 3:
+          day = "Wednesday";
+          break;
+        case 4:
+          day = "Thursday";
+          break;
+        case 5:
+          day = "Friday";
+          break;
+        case 6:
+          day = "Saturday";
+      }
+      document.getElementById("demo").innerHTML = "Today is " + day;
+    </script>
+    <!-- ========================================== -->
+    <b id="b"></b>
+    <script>
+      let monthh;
+      switch (new Date().getMonth()) {
+        case 0:
+          monthh = "jan";
+          break;
+        case 1:
+          monthh = "feb";
+          break;
+        case 2:
+          monthh = "march";
+          break;
+        case 3:
+          monthh = "april";
+          break;
+        case 4:
+          monthh = "may";
+          break;
+        case 5:
+          monthh = "jun";
+          break;
+        case 6:
+          monthh = "july";
+          break;
+        case 7:
+          monthh = "aug";
+          break;
+        case 8:
+          monthh = "sep";
+          break;
+        case 9:
+          monthh = "oct";
+          break;
+        case 10:
+          monthh = "nov";
+          break;
+        case 11:
+          monthh = "dec";
+      }
+      document.getElementById("b").innerHTML = monthh;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="a"></p>
+    <script>
+        let a = "ravi";
+        let b = "senjaliya";
+        document.getElementById('a').innerHTML = a + " " + b;
+    </script>
+    <hr>
+    <!-- --------------------(length)------------------------------------------------------------------------------------------ -->
+    <p id="b"></p>
+    <script>
+        var c = "abcdefghijklmnopq";
+        document.getElementById('b').innerHTML = c.length;
+    </script>
+    <hr>
+    <!-- ---------------------("")----------------------------------------------------------------------------------------- -->
+    <p id="c"></p>
+    <script>
+        var text = `im ravi \"senjaliya\" shaileshbhai`;
+        document.getElementById('c').innerHTML = text;
+    </script>
+    <hr>
+    <!-- ---------------------(typeof)----------------------------------------------------------------------------------------- -->
+    <p id="demo"></p>
+    <script>
+        var d = new String("ravi senjaliya");
+        document.getElementById('demo').innerHTML = typeof d;
+    </script>
+    <hr>
+    <!-- ------------------------(==)-------------------------------------------------------------------------------------- -->
+    <p id="d"></p>
+    <script>
+        var e = new String("ravi");
+        var f = new String("ravi");
+        document.getElementById('d').innerHTML = (e == f);
+    </script>
+    <hr>
+    <!-- -------------------(slice)------------------------------------------------------------------------------------------- -->
+    <p id="e"></p>
+    <script>
+        let g = "apple , banana , mango";
+        document.getElementById('e').innerHTML = g.slice(0, 15);
+    </script>
+    <hr>
+    <!-- --------------------(substring)------------------------------------------------------------------------------------------ -->
+    <p id="f"></p>
+    <script>
+        let h = "apple , banana , mango";
+        document.getElementById('f').innerHTML = h.substring(7, 17);
+    </script>
+    <hr>
+    <!-- ----------------(substr)---------------------------------------------------------------------------------------------- -->
+    <p id="g"></p>
+    <script>
+        let i = "apple , banana , mango";
+        document.getElementById('g').innerHTML = i.substr(3, 13);
+    </script>
+    <hr>
+    <!-- -------------------(replace)------------------------------------------------------------------------------------------- -->
+    <p id="h">ravi senjaliya ravi</p>
+    <button onclick="myravi()">click</button>
+
+    <script>
+        function myravi() {
+            let text = document.getElementById('h').innerHTML;
+            document.getElementById('h').innerHTML = text.replace(/ravi/ig, "milan");
+
+        }
+    </script>
+    <hr>
+    <!-- ---------------------(touppercase)----------------------------------------------------------------------------------------- -->
+    <p id="i">ravi senjaliya</p>
+    <button onclick="myrv()">toupper</button>
+    <script>
+        function myrv() {
+            var textt = document.getElementById('i').innerHTML;
+            document.getElementById('i').innerHTML = textt.toUpperCase();
+        }
+    </script>
+    <hr>
+    <!-- -----------------(trim)-------------------------------------------------------------------------------------------------------- -->
+    <p id="j"></p>
+    <script>
+        let xx = "    ravi sen";
+        let xy = xx.trim();
+        document.getElementById('j').innerHTML = xx.length + "<br>" + xy.length;
+    </script>
+    <hr>
+    <!-- -----------------(padding)----------------------------------------------------------------------------------------------- -->
+    <p id="ll"></p>
+    <script>
+        let pp = "x";
+        document.getElementById('ll').innerHTML = pp.padStart(10,0);
+    </script><hr>
+    <!-- ------------(charAt)------------------------------------------------------------------------------------------------------- -->
+     <p id="kk"></p>
+     <script>
+        let sc = "RAVISENJALIYA"
+        document.getElementById('kk').innerHTML = sc.charAt(4);
+     </script><hr>
+     <!-- -------------(charcodeAt)------------------------------------------------------------------------------------------- -->
+     <p id="jl"></p>
+     <script>
+        let rc ="ravi senjliay";
+        document.getElementById('jl').innerHTML = rc.charCodeAt(5);
+     </script><hr>
+     <!-- -------------------------------------------------------------------------------------------------------------------- -->
+     <button onclick="rep()">change</button>
+     <h1 id="repl">ravi senjaliya ravi</h1>
+     
+
+    <script>
+    function rep() {
+        let text = document.getElementById("repl").innerHTML;
+        document.getElementById("repl").innerHTML = text.replace(/Ravi/ig,"mansi");
+    }
+
+    </script>
+<!-- ------------------------------------------------------------------------------- -->
+<p id="con"></p>
+<script>
+    let name = "ravi";
+    let fname = "senjaliya";
+    let both = name.concat(" ",fname);
+
+    document.getElementById("con").innerHTML = both ;
+</script>
+
+</body> 
+
+</html>

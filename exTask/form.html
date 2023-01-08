@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        first name: <br>
+        <input type="text" id="fname"> <br><br>
+        second name: <br>
+        <input type="text" id="sname"> <br><br>
+        result: <br>
+        <input type="text" id="ress"> <br><br>
+
+        <input type="button" value="display result" onclick="ravi()">
+    </div>
+
+    <script>
+        function ravi() {
+        var ab = parseInt (document.getElementById('fname').value);
+        var bc = parseInt (document.getElementById('sname').value);
+        var tot = ab + bc;
+
+        document.getElementById('ress').value = tot ;
+
+    }
+    </script><hr><br><br>
+<!-- ------------------------------------------------------------------------ -->
+    <div>
+        first value: <br>
+        <input type="text" id="ff"><br><br>
+        second value : <br>
+        <input type="text" id="ss"><br><br>
+        result : <br>
+        <input type="text" id="re"><br><br>
+        
+        <input type="button" value="display value" onclick="raj()">
+    </div>
+    
+
+
+    <script>
+        function raj(){
+            var _a = parseInt(document.getElementById('ff').value) 
+            var _b = parseInt(document.getElementById('ss').value) 
+            var _d = _a * _b ;
+
+            document.getElementById('re').value = _d ;
+        }
+    </script>
+</body>
+</html>

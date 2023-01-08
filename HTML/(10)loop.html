@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="a"></p>
+    <script>
+      const name = ["ravi", "rajan", "milan", "bhargav", "darshit", "jay"];
+
+      let vall = "";
+      for (let i = 0; i < name.length; i++) {
+        vall += name[i] + "<br>";
+      }
+      document.getElementById("a").innerHTML = vall;
+    </script>
+    <!-- ================================================== -->
+    <p id="b"></p>
+    <script>
+      const obj = {
+        name: "ravi",
+        lastname: "senjaliya",
+        fatherN: "shileshbhai",
+        age: "20year",
+      };
+      let nm = "";
+
+      for (let x in obj) {
+        nm += obj[x] + " ";
+      }
+      document.getElementById("b").innerHTML = nm;
+    </script>
+    <!-- ==================================================== -->
+    <p id="c"></p>
+    <script>
+      const num = [20, 30, 10, 7, 7];
+      let txt = "";
+
+      for (let x in num) {
+        txt += num[x] + " ";
+      }
+      document.getElementById("c").innerHTML = txt;
+    </script>
+    <!-- ==================================================== -->
+    <p id="e"></p>
+    <script>
+      const text = 5;
+      let print = "";
+
+      for (let i = 0; i < text; i++) {
+        print += " i like javascript " + "<br>";
+      }
+      document.getElementById("e").innerHTML = print;
+    </script>
+
+    <!-- ==================(foreach)=================================== -->
+    <p id="d"></p>
+    <script>
+      const nom = [200, 30, 41, 30, 29, 80];
+      let ab = "";
+
+      nom.forEach(function (num, index, arr) {
+        ab += num + "<br>";
+      });
+      document.getElementById("d").innerHTML = ab;
+    </script>
+
+    <!-- ====================================================== -->
+    <!-- <p id="f"></p>
+      <script>
+          let vel = "";
+
+          for (let i = 0; i < 101; i++) {
+        vel += i + "<br>"   ;         
+          }
+          document.getElementById("f").innerHTML = vel ;
+      </script> -->
+
+    <!-- =================(for in)==================================== -->
+    <p id="g"></p>
+    <script>
+      const arr = { name: "kamal", course: " full stack", age: " 25" };
+      let amti = "";
+
+      for (let x in arr) {
+        amti += arr[x];
+      }
+      document.getElementById("g").innerHTML = amti;
+    </script>
+    <!-- =================================================== -->
+    <p id="h"></p>
+    <script>
+      const cd = [5, 34, 12, 89, 23, 7];
+      let ef = "";
+
+      for (let x in cd) {
+        ef += cd[x] + "<br>";
+      }
+      document.getElementById("h").innerHTML = ef;
+    </script>
+    <!-- =================================================== -->
+
+    <!-- <h3 id="rav"></h3>
+    <script>
+       var array = [1,4,44,64,55,24,32,55,19,17,74,22,23];
+        
+       for( v in array){
+        if (v === 0) {
+                console.log(v +  " is even");
+        }
+        else if (v % 2 === 0) {
+                console.log(v + " is even");   
+        }
+        else {
+                console.log(v + " is odd");
+        }
+       }
+    </script> -->
+
+    <!-- ==========(for of)================================== -->
+
+    <h3 id="rav"></h3>
+    <script>
+      const ar = ["ravi", "rajan", "renish", "milan", "jay"];
+      let abc = "";
+
+      for (let x of ar) {
+        abc += x + "<br>";
+      }
+      document.getElementById("rav").innerHTML = abc;
+    </script>
+    <!-- ================(wile)============================= -->
+    <h3 id="jay"></h3>
+    <script>
+      const abb = ["manav", "rajan", "renish", "milan", "jay"];
+      let acc = "";
+      let i = 0;
+      while (abb[i]) {
+        acc += abb[i] + "<br> ";
+        i++;
+      }
+      document.getElementById("jay").innerHTML = acc;
+    </script>
+    <!-- =============(do wile)===================================== -->
+    <h3 id="hh"></h3>
+    <script>
+      let tex = "";
+      let x = 0;
+      do {
+        tex += x;
+        if (x === 10) {
+          break;
+        }
+        x++;
+      } while (x <= 30);
+      document.getElementById("hh").innerHTML = tex;
+    </script>
+    <!-- ====================================================================== -->
+    <!-- <p id="demo"></p>
+
+    <script>
+     const rav = new Map([
+     ["ravi",20000],
+     ["rajan",30000],
+     ["milan",50000]
+     ]);
+
+     let man = "";
+
+     rav.forEach(function(value , key) {
+      man+= value +" ===> "+ key + "<br>"; 
+      document.getElementById("demo").innerHTML = man ;
+     });
+    </script> -->
+    <!-- ===================================================================== -->
+    <button onclick="myfn()"> click</button>
+    <h1 id="rv"></h1>
+
+    <script>
+      const sen = "most power to Most";
+       document.getElementById("rv").innerHTML = sen ;
+
+    function myfn() {
+      document.getElementById("rv").innerHTML = sen.replace(/most/ig ,"less");
+    }
+    </script>
+    <!-- =================================== -->
+   <input type="text" id="in">
+   <button onclick="myfn()">click</button><br>
+   <b id="rv"></b>
+   
+   <script>
+    function myfn() {
+      let x = document.getElementById("in").value ;
+      let val = document.getElementById("rv");
+      val.innerHTML = "";
+       
+      try {
+        if (x == "") throw "empty 😁";
+        if (isNaN(x)) throw "NaN 😅";
+        if (x < 5) throw "it's too low 😫";
+        if (x > 10) throw "it's too high 🙄";
+      } catch (err) {
+        val.innerHTML =  err ;
+      }
+      finally{
+        document.getElementById("in").value = "";
+      }
+    }
+   </script>
+
+   <!-- ======================================================================== -->
+   
+  </body>
+</html>
